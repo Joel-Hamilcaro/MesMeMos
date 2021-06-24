@@ -3,7 +3,7 @@
 <img alt="HTML5" src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"/><img alt="CSS3" src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"/><img alt="JavaScript" src="https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"/><img alt="NodeJS" src="https://img.shields.io/badge/node.js%20-%2343853D.svg?&style=for-the-badge&logo=node.js&logoColor=white"/><img alt="MySQL" src="https://img.shields.io/badge/mysql-%2300f.svg?&style=for-the-badge&logo=mysql&logoColor=white"/>
 
 *Projet individuel réalisé dans le cadre du cours "Programmation Web"*   
-**Auteurs : [Joël Hamilcaro](https://github.com/Joel-Hamilcaro/)**   
+**Auteur : [Joël Hamilcaro](https://github.com/Joel-Hamilcaro/)**   
 
 Le site "MesMeMos" vous permet de créer et de partager des aides-mémoire, appelées "mémos". Vous pourrez à tout moment les modifier, les supprimer ou les partager aux personnes de votre choix. Ceux-ci pourront alors lire ces mémos, et, si vous le désirez, il pourront les modifier.
 
