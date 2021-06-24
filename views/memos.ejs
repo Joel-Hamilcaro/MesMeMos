@@ -1,0 +1,95 @@
+<%- include('head'); %>
+
+<body>
+
+  <script src="form.js"></script>
+
+  <%- include('header'); %>
+
+      <p class="Msg"> <%=c_msg%> </p>
+      <p  class="center"><a href="deconnexion" title="Deconnexion">Se déconnecter</a> </p>
+      <%- include('new_memo'); %>
+      <p class="center"> <input id="btnMemos" class="Button" type="button" value="Voir mes mémos"> </p>
+      <% var tot1 = 0 ;%>
+      <%for (var elt in results){%>
+        <div class="memo">
+          <fieldset class="formM">
+          <form action="/accueil" method="post">
+                <p>Auteur : <%=login%> </p>
+                <p>Contributeurs :</p>
+                <ul class="collabs">
+                <%var tot = 0;%>
+                <%for (var i in collabs){%>
+                  <% if (collabs[i].mid==results[elt].mid){ %>
+                  <%var s = "";%>
+                  <%if(collabs[i].wr==0) s = "(Lecture seule)";%>
+                  <li> <%= collabs[i].collabs %> <i class="msg"><%= s %></i> </li>
+                  <% tot = tot+1; %>
+                <% } } %>
+                </ul>
+                <% if(tot==0){%>
+                    <p class="msg2">Vous n'avez aucun contributeur pour ce mémo. Cliquer sur "Modifier" pour en ajouter un.</p>
+                <%}%>
+                <p>Titre</p>
+                <input class="modifiable" name="title" readonly="readonly" required="" value="<%=results[elt].title%>">
+                <p>Contenu du mémo</p>
+                <textarea class="modifiable" name="content" readonly="readonly"><%=results[elt].content%></textarea>
+                <p><input  class="modifier" type="button" value="Modifier"></p>
+                <input name="mid" type="hidden" value=<%=results[elt].mid %> >
+                <input name="login" type="hidden" value=<%=login%> >
+          </form>
+          <form action="/delete" method="post">
+            <input name="mid2" type="hidden" value=<%=results[elt].mid %> >
+            <p><input  class="supprimer" type="submit" value="Supprimer"></p>
+            <input name="login2" type="hidden" value=<%= login %> >
+          </form>
+        </fieldset>
+      </div>
+      <% tot1 = tot1+1; %>
+      <%}%>
+      <% if(tot1==0){ %>
+        <fieldset class="formM">
+            <p class="center"> Vous n'avez aucun mémos </p>
+        </fieldset>
+      <% } %>
+
+      <p class="center"> <input id="btnPartage" class="Button" type="button" value="Voir mes partages"> </p>
+      <% var tot2 = 0; %>
+      <%for (var elt in access){%>
+        <% if (access[elt].wr==0){ %>
+        <div class="memo">
+            <fieldset class="formP">
+                <p>Auteur : <%=access[elt].author%> </p>
+                <p>Titre</p>
+                <input class="modifiable" name="title" readonly="readonly" required="" value="<%=access[elt].title%>">
+                <p>Contenu du mémo</p>
+                <textarea class="modifiable" name="content" readonly="readonly"><%=access[elt].content%></textarea>
+                <p class="msg"><i>(Vous n'êtes pas autorisé(e) à le modifier)</i></p>
+            </fieldset>
+        </div>
+        <% } else { %>
+        <div class="memo">
+          <form action="/accueil" method="post">
+            <fieldset class="formP">
+                <p>Auteur : <%=access[elt].author%> </p>
+                <p>Titre</p>
+                <input class="modifiable" name="title" readonly="readonly" required="" value="<%=access[elt].title%>">
+                <p>Contenu du mémo</p>
+                <textarea class="modifiable" name="content" readonly="readonly"><%=access[elt].content%></textarea>
+                <p><input class='modifier' type='button' value='Modifier'></p>
+                <input name="mid" type="hidden" value=<%=access[elt].mid %> >
+                <input name="login" type="hidden" value=<%= login %> >
+            </fieldset>
+          </form>
+        </div>
+        <% } %>
+        <% tot2 = tot2+1 ;%>
+      <%}%>
+      <% if(tot2==0){ %>
+        <fieldset class="formP">
+            <p class="center"> Personne ne vous a partagé de mémos. </p>
+        </fieldset>
+      <% } %>
+
+
+<%- include('foot'); %>

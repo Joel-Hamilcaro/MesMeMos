@@ -1,0 +1,14 @@
+<div>
+  <p class="center"> <input id="btnCreation" class="Button" type="button" value="Créer un mémo"> </p>
+  <form class="formC" action="/memos" method="post">
+    <fieldset>
+        <p class="leftC">Titre <em>*</em></p>
+        <input class="title" name="title" autofocus required=""><br>
+        <p class="rightC">Contenu du mémo</p>
+        <textarea name="content"></textarea>
+      <input name="login" type="hidden" value=<%= login %> >
+      <p><i>Les champs marqués par </i><em>*</em> sont <em>obligatoires</em></p>
+      <p><input type="submit" value="Valider"></p>
+    </fieldset>
+  </form>
+</div>

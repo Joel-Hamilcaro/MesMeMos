@@ -1,0 +1,180 @@
+
+body{
+  background-color:  #373737 ;
+  background-image: url("wall.png");
+  color : white;
+  font-size: 20px;
+  font-family: Arial,sans-serif;
+  text-align: justify;
+}
+
+h1{
+  font-size: 5vw;
+  text-align: center;
+}
+
+
+#btnConnexion{
+  text-align: center;
+}
+
+.form{
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.formC{
+  text-align: center;
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.formM{
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.formP{
+  display: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.center{
+  text-align: center;
+}
+
+
+.left{
+  position:relative;
+}
+
+
+.right{
+  position:relative;
+}
+
+.button{
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid;
+  padding: 5px 17px 7px;
+  border-radius: 20px;
+  margin-right: 18px;
+  text-align: center;
+}
+
+.button:active{
+  color: white;
+  background-color: transparent;
+  border: 2px solid;
+  padding: 5px 17px 7px;
+  border-radius: 20px;
+  margin-right: 18px;
+  text-align: center;
+}
+
+.button:hover{
+  color: #373737;
+  border: 2px solid;
+  border-color: #373737;
+  background-color: white;
+}
+
+
+.Button{
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: 2px solid;
+  padding: 5px 17px 7px;
+  border-radius: 20px;
+  margin-right: 18px;
+  text-align: center;
+}
+
+.Button:active{
+  color: white;
+  background-color: transparent;
+  border: 2px solid;
+  padding: 5px 17px 7px;
+  border-radius: 20px;
+  margin-right: 18px;
+  text-align: center;
+}
+
+.Button:hover{
+  color: #373737;
+  border: 2px solid;
+  border-color: #373737;
+  background-color: white;
+}
+
+.infos{
+  font-weight: bold;
+  position: relative;
+  left:10px;
+  bottom : 2px;
+  font-size: 15px;
+  border: 0.5px solid;
+  padding: 2px 5px 2px;
+  border-radius: 20px;
+  margin-right: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.infos:hover{
+  color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+  background-color: white;
+}
+
+.hidden{
+  color : rgba(255, 255, 255, 0.5);
+  font-size: initial;
+}
+
+a{
+ color : white;
+ text-decoration: underline;
+
+}
+
+a:visited{
+  color:rgba(255, 255, 255, 0.5);
+  font-weight: bold;
+}
+
+a:hover{
+	font-weight: bolder;
+	text-decoration: overline;
+}
+
+.msg{
+  font-size: 15px;
+  color:rgba(255, 50, 50, 1);
+}
+
+.msg2{
+  color:rgba(255, 50, 50, 1);
+}
+
+.Msg{
+  color:rgba(255, 50, 50, 1);
+  text-align: center;
+  font-weight: bolder;
+}
+
+textarea{
+  width: 75vw;
+  height: 10vw;
+}
+
+.contact{
+  text-align: center;
+  color : rgba(255, 255, 255, 0.5);
+}
+
+.description{
+  text-align: justify;
+
+}

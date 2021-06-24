@@ -1,0 +1,26 @@
+<%- include('head'); %>
+
+
+<body>
+  <%- include('header'); %>
+
+  <script src="form.js"></script>
+
+  <div class="center">
+    <p>Inscription</p>
+  <form class="form" action="/inscription" method="post">
+  <fieldset>
+      <p class="left"> Pseudonyme <span id="ps" class="infos"> ? </span> </p>
+      <p class="msg"> <%=w_ps%> </p>
+      <input type="text" name="login" required pattern="[A-z0-9]{3,10}"/>
+        <p> <span id="hps" class="hidden"> Veuillez choisir un pseudonyme de 3 à 10 caractères alphanumériques. </span> </p>
+      <p class="right"> Mot de passe <span id="mdp" class="infos"> ? </span> </p>
+      <p class="msg"> <%=w_mdp%> </p>
+        <input type="password" name="password" required pattern="[A-z0-9]{3,}"/>
+        <p> <span id="hmdp" class="hidden"> Veuillez choisir un mot de passe  3 à 10 caractères alphanumériques. </span> </p>
+      <p><input type="submit" value="Confirmer" /></p>
+  </fieldset>
+  </form>
+  </div>
+
+<%- include('foot'); %>

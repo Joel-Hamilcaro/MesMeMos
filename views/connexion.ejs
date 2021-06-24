@@ -1,0 +1,32 @@
+<%- include('head'); %>
+
+<body>
+
+  <%- include('header'); %>
+
+    <script src="form.js"></script>
+
+
+
+    <div class="center">
+      <p> <input id="btnConnexion" class="button" type="button" value="Connexion"> </p>
+      <form action="/connect" class="form" method="post">
+          <fieldset>
+            <p class="description">
+            <h3> Bienvenue sur MesMeMos ! </h3>
+            <p>Ce site vous permet de créer et de partager des aide-mémoire, plus communément appelées "mémos".<br>
+            Vous pourrez à tout moment les modifier, les supprimer ou les partager à d'autres personnes.<br>
+            Ceux-ci pourront alors les lire, et même les modifier si vous leurs en donnez le droit !
+            </p>
+            <hr>
+            <p class="left"> Pseudonyme </p>
+            <p class="msg"> <%= w_ps %> </p>
+            <input type="text" name="login" required pattern="[A-z0-9]{3,}"/>
+            <p class="right">Mot de passe</p><p class="msg"> <%= w_mdp %> </p>
+            <input type="password" name="password" required pattern="[A-z0-9]{3,}"/>
+            <p> <input type="submit" value="Confirmer" /> </p>
+            <a class="a" href="inscription" title="Inscription">Créer un compte</a>
+          </fieldset>
+      </form>
+    </div>
+<%- include('foot'); %>
