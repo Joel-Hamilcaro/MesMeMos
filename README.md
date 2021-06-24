@@ -11,7 +11,7 @@ Le site "MesMeMos" vous permet de créer et de partager des aides-mémoire, appe
 
 ## I.A) 1ère possibilité (utiliser sa propre bdd mysql) :
 
--  Selon la configuration de votre base de données, modifier les lignes 25 à 35 dans le fichier main.js
+-  Selon la configuration de votre base de données, modifier les lignes 25 à 35 dans le fichier main.js   
 Création des tables sql :
 - Ouvrir un terminal dans le dossier DM (contenant le fichier create_tables.sql)
 - Ouvrir mysql avec la base de donnée et l'utilisateur correspondant : mysql -u user -p database
@@ -35,7 +35,7 @@ Création des tables sql :
 
 # II / Lancement du serveur  
 
-Ouvrir un terminal dans le dossier DM (contenant le fichier main.js)  
+Ouvrir un terminal dans le dossier courant (contenant le fichier main.js)  
   - 'nodejs main.js'  
 
 # III / Utilisation du site
