@@ -19,30 +19,30 @@ Création des tables sql :
 
 ## I.B) 2ème possibilité (configurer une nouvelle bdd et un nouvel utilisateur) :
 
-Ajout de l'utilisateur :
-  - Ouvrir la console mysql en root 'sudo mysql'
-  - Dans la console mysql : ajouter l'utilisateur : 'etu21503259'
-    CREATE USER 'etu21503259'@'localhost' IDENTIFIED WITH mysql_native_password BY 'etu21503259';
-Ajout de la base de donnée :
-  - CREATE DATABASE etu21503259;
-Ajout des privilèges à l'utilisateur :
-  - GRANT ALL ON etu21503259.* TO 'etu21503259'@'localhost';
-  - FLUSH PRIVILEGES;
-Sortir de la console mysql de root.
-Création des tables sql :
-  - Ouvrir mysql avec la base de donnée et l'utilisateur correspondant : mysql -u etu21503259 -p etu21503259
-  - Dans la console mysql : 'source create_tables.sql'
+Ajout de l'utilisateur :   
+  - Ouvrir la console mysql en root 'sudo mysql'  
+  - Dans la console mysql : ajouter l'utilisateur : 'etu21503259'  
+    CREATE USER 'etu21503259'@'localhost' IDENTIFIED WITH mysql_native_password BY 'etu21503259';   
+Ajout de la base de donnée :  
+  - CREATE DATABASE etu21503259;  
+Ajout des privilèges à l'utilisateur :  
+  - GRANT ALL ON etu21503259.* TO 'etu21503259'@'localhost';   
+  - FLUSH PRIVILEGES;   
+Sortir de la console mysql de root.  
+Création des tables sql :  
+  - Ouvrir mysql avec la base de donnée et l'utilisateur correspondant : mysql -u etu21503259 -p etu21503259  
+  - Dans la console mysql : 'source create_tables.sql'  
 
-# II / Lancement du serveur
+# II / Lancement du serveur  
 
-Ouvrir un terminal dans le dossier DM (contenant le fichier main.js)
-  - 'nodejs main.js'
+Ouvrir un terminal dans le dossier DM (contenant le fichier main.js)  
+  - 'nodejs main.js'  
 
 # III / Utilisation du site
 
-  - Aller à l'adresse 'http://localhost:8080/'
-  - Il est possible d'inscrire cliquant sur "créer un compte"
-  - On peut se connecter à un compte déjà existant :
+  - Aller à l'adresse 'http://localhost:8080/'.  
+  - Il est possible de s'inscrire en cliquant sur "créer un compte".   
+  - On peut se connecter à un compte déjà existant :  
       - Pseudo "alice" , MDP : "ecila"
       - Pseudo "bob" , MDP : "bob"
       - Pseudo "carol" , MDP : "lorac"
